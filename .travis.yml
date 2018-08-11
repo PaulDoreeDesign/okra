@@ -7,10 +7,9 @@ branchs:
   - release
 before_script:
   npm update -g npm
-install:
-- npm install
 script:
 # - npm test
+- npm install
 - npm run build
 deploy:
   provider: script
