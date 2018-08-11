@@ -1,3 +1,3 @@
-import SemesterPicker from './SemesterPicker';
+import SemesterPicker from './Picker';
 
 export default SemesterPicker;
