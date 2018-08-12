@@ -7,6 +7,7 @@ const Login = Loadable({
 });
 
 export default {
+  exact: true,
   path: '/login',
   Component: Login,
 };
