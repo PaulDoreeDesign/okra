@@ -7,6 +7,9 @@ branchs:
   - release
 before_script:
   npm update -g npm
+cache:
+  directories:
+  - node_modules
 script:
 # - npm test
 - npm install
