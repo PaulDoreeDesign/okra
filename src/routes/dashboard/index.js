@@ -1,8 +1,12 @@
 import React from 'react';
-import Dashboard from './Dashboard';
+import Loadable from 'react-loadable';
+ 
+const Dashboard = Loadable({
+  loader: () => import('./Dashboard'),
+  loading: () => <div>Loading..</div>,
+});
 
 export default {
-  isAuthenticated: true,
   path: '/',
   Component: Dashboard,
 };

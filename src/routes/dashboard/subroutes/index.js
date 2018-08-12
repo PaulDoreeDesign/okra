@@ -17,8 +17,6 @@ const routes = [
 
 const mapRoutesToRouteComponent = fp.map(route => <Route key={route.path} {...route} />);
 
-const ContentContainer = props => {
-  return mapRoutesToRouteComponent(routes);
-}
+const ContentContainer = () => mapRoutesToRouteComponent(routes);
 
 export default ContentContainer;
