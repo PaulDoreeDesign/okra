@@ -5,11 +5,14 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import App from './App';
 import theme from './theme';
 import store from './redux/store';
+import UserProvider from './components/Provider';
 
 ReactDom.render(
   <MuiThemeProvider theme={theme}>
     <Provider store={store}>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </Provider>
   </MuiThemeProvider>,
   document.getElementById('root'),
