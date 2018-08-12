@@ -9,6 +9,4 @@ aws_secret_access_key = foo
 EOF1
 
 aws s3 sync ${TRAVIS_BUILD_DIR}/dist s3://foo
-elif [ ${TRAVIS_BUILD_DIR} == "master" ]
-# Do something
 fi
