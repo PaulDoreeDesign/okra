@@ -16,6 +16,6 @@ script:
 - npm run build
 deploy:
   provider: script
-  script: chmod +x ./deploy.sh && ./deploy.sh
+  script: chmod +x ./deploy.sh && bash ./deploy.sh
   on: 
     branch: master
