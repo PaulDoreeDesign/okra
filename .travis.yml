@@ -16,6 +16,6 @@ script:
 - npm run build
 deploy:
   provider: script
-  script: bash deploy.sh
+  script: ./deploy.sh
   on: 
     all_branches: true
