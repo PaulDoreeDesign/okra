@@ -1,31 +1,37 @@
+import React from 'react';
 import fp from 'lodash/fp';
-import React, { Fragment } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import withUser from '../components/HOC/WithUser';
 import Login from './login';
 import Dashboard from './dashboard';
-import Auth from '../components/HOC/Auth';
 
-const routes = [
-  Login,
+const authenticatedRoutes = [
   Dashboard,
 ];
 
-const mapRoutes = fp.map(route => <Route
+const mapRoutes = fp.map(route => (<Route
   {...route}
   key={route.path}
-  component={
-    route.isAuthenticated
-      ? Auth(route.Component)
-      : route.Component
-  }
-/>);
+  component={route.Component}
+/>));
 
 const RouterComponent = (props) => {
-  return (
-    <Fragment>
-      {mapRoutes(routes)}    
-    </Fragment>
-  );
-}
+  const { model } = props;
 
-export default RouterComponent;
+  return (
+    <Switch>
+      {model.isLoggedIn ? (
+        mapRoutes(authenticatedRoutes)
+      ) : (
+        <Route
+          component={Login.Component}
+          path={Login.path}
+          exact={Login.exact}
+        />
+      )}
+      <Redirect to="/login" />
+    </Switch>
+  );
+};
+
+export default withUser(RouterComponent);
