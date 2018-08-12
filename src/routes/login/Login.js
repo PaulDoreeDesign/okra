@@ -1,26 +1,29 @@
+import fp from 'lodash/fp';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import handleLogin from '../../redux/actions/login';
+import { Redirect, withRouter } from 'react-router-dom';
+import withUser from '../../components/HOC/WithUser';
+
+const handleLoginClick = (route, props) => () => {
+  props.actions.handleUserLogin();
+  props.history.push('/');
+};
 
 class Login extends Component {
-  render() {
-    const { isLoggedIn } = this.props;
+  state = {};
 
+  render() {
     return (
       <div>
-        <button onClick={this.props.onLogin}>Click to log in</button>
+        <button onClick={handleLoginClick('/', this.props)}>
+          Click to log in
+        </button>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ isLoggedIn }) => ({
-  isLoggedIn,
-});
-
-const mapDispatchToProps = dispatch => ({
-  onLogin: () => dispatch(handleLogin()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default fp.compose(
+  withUser,
+  withRouter,
+)(Login);
