@@ -1,4 +1,10 @@
-import Topics from './Topics';
+import React from 'react';
+import Loadable from 'react-loadable';
+ 
+const Topics = Loadable({
+  loader: () => import('./Topics'),
+  loading: () => <div>Loading..</div>,
+});
 
 export default [
   {

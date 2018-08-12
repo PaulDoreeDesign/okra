@@ -1,16 +1,13 @@
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Sidebar from '../../components/Sidebar';
 import ContentContainer from './ContentContainer';
 import handleToggleIsSidebarOpen from '../../redux/actions/toggleSidebar';
 
-const styles = {
-  
-};
+const styles = {};
 
-const Dashboard = props => {
+const Dashboard = (props) => {
   const { classes, onToggleIsSidebarOpen, isSidebarOpen } = props;
 
   return (
@@ -22,7 +19,7 @@ const Dashboard = props => {
       <ContentContainer isSidebarOpen={isSidebarOpen} />
     </div>
   );
-}
+};
 
 const mapStateToProps = ({ isSidebarOpen }) => ({
   isSidebarOpen,
