@@ -9,4 +9,8 @@ then
   EOL
 
   aws s3 sync ${TRAVIS_BUILD_DIR}/dist s3://${okra-ui-dev}
+elif [ ${TRAVIS_BUILD_DIR} == "master" ]
+  # Do something
+else
+  # Do something
 fi
