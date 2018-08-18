@@ -8,5 +8,5 @@ const Days = Loadable({
 
 export default {
   path: '/days',
-  component: Days,
+  Component: Days,
 };

@@ -8,5 +8,5 @@ const Classes = Loadable({
 
 export default {
   path: '/classes',
-  component: Classes,
+  Component: Classes,
 }

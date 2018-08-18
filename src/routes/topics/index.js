@@ -9,10 +9,10 @@ const Topics = Loadable({
 export default [
   {
     path: '/topics',
-    component: Topics,
+    Component: Topics,
   },
   {
     path: '/topics/:id',
-    component: Topics,
+    Component: Topics,
   },
 ];

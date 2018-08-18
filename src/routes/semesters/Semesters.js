@@ -13,7 +13,9 @@ const styles = {
 
 class Semesters extends Component {
   state = { isModalOpen: false };
-
+  componentDidMount() {
+    console.log('wtfff');
+  }
   get icons() {
     const { classes } = this.props;
 

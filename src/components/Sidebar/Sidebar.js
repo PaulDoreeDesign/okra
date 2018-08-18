@@ -87,39 +87,33 @@ const styles = {
 
 const links = [
   {
-    to: "/",
-    exact: true,
+    to: "/dashboard",
     title: "Dashboard",
     Link: InsertChart,
   },
   {
     title: "Semesters",
-    exact: true,
     to: "/semesters",
     Link: ViewAgenda,
   },
   {
     title: "Classes",
-    exact: true,
     to: "/classes",
     Link: Subject,
   },
   {
     title: "Topics",
-    exact: true,
     to: "/topics",
     Link: ViewModule
   },
   {
     title: "Days",
     to: "/days",
-    exact: true,
     Link: Today
   },
   {
     title: "Settings",
     to: "/settings",
-    exact: true,
     Link: Settings,
   },
 ];

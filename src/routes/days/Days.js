@@ -33,6 +33,8 @@ class Days extends Component {
   }));
 
   render() {
+    console.log('in days');
+
     const { isModalOpen } = this.state;
     const { classes } = this.props;
 

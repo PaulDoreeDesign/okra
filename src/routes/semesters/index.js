@@ -8,5 +8,5 @@ const Semesters = Loadable({
 
 export default {
   path: '/semesters',
-  component: Semesters,
+  Component: Semesters,
 };
