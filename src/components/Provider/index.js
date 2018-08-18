@@ -4,7 +4,7 @@ export const context = React.createContext();
 
 class Provider extends React.Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: Boolean(localStorage.getItem('authorization')), // temporary
   };
 
   get actions() {

@@ -3,10 +3,20 @@ import fp from 'lodash/fp';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import withUser from '../components/HOC/WithUser';
 import Login from './login';
-import Dashboard from './dashboard';
+import topics from './topics';
+import settings from './settings';
+import semesters from './semesters';
+import days from './days';
+import classes from './classes';
+import dashboard from './dashboard';
 
 const authenticatedRoutes = [
-  Dashboard,
+  dashboard,
+  topics,
+  settings,
+  semesters,
+  days,
+  classes,
 ];
 
 const mapRoutes = fp.map(route => (<Route
@@ -18,8 +28,11 @@ const mapRoutes = fp.map(route => (<Route
 const RouterComponent = (props) => {
   const { model } = props;
 
+  console.log('wtfff');
+
   return (
     <Switch>
+      <Redirect exact from="/" to="/dashboard" />
       {model.isLoggedIn ? (
         mapRoutes(authenticatedRoutes)
       ) : (
@@ -27,9 +40,7 @@ const RouterComponent = (props) => {
           component={Login.Component}
           path={Login.path}
           exact={Login.exact}
-        />
-      )}
-      <Redirect to="/login" />
+        />)}
     </Switch>
   );
 };

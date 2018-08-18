@@ -7,6 +7,6 @@ const Dashboard = Loadable({
 });
 
 export default {
-  path: '/',
+  path: '/dashboard',
   Component: Dashboard,
 };
