@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
-import Titlebar from '../../../../components/Titlebar';
+import Titlebar from '../../components/Titlebar';
 
 const styles = {
   icon: {
@@ -11,20 +11,13 @@ const styles = {
   },
 };
 
-class Semesters extends Component {
+class Settings extends Component {
   state = { isModalOpen: false };
 
   get icons() {
     const { classes } = this.props;
 
     return [
-      {
-        id: 1,
-        toolTipContent: "Add semester",
-        Component: AddCircleOutline,
-        className: classes.icon,
-        onClick: this.handleIconClick, 
-      }
     ];
   }
 
@@ -38,10 +31,10 @@ class Semesters extends Component {
 
     return (
       <div>
-        <Titlebar title="Semesters" icons={this.icons} />
+        <Titlebar title="Settings" icons={this.icons} />
       </div>
     );
   }
 };
 
-export default withStyles(styles)(Semesters);
+export default withStyles(styles)(Settings);

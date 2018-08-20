@@ -87,8 +87,7 @@ const styles = {
 
 const links = [
   {
-    to: "/",
-    exact: true,
+    to: "/dashboard",
     title: "Dashboard",
     Link: InsertChart,
   },

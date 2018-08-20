@@ -8,13 +8,11 @@ const Topics = Loadable({
 
 export default [
   {
-    exact: true,
     path: '/topics',
-    component: Topics,
+    Component: Topics,
   },
   {
-    exact: true,
     path: '/topics/:id',
-    component: Topics,
+    Component: Topics,
   },
 ];

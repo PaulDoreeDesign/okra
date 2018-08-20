@@ -13,6 +13,8 @@ class Login extends Component {
   state = {};
 
   render() {
+    console.log('hello');
+
     return (
       <div>
         <button onClick={handleLoginClick('/', this.props)}>

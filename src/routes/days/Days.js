@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
-import Titlebar from '../../../../components/Titlebar';
+import Titlebar from '../../components/Titlebar';
 
 const styles = {
   icon: {
@@ -33,6 +33,8 @@ class Days extends Component {
   }));
 
   render() {
+    console.log('in days');
+
     const { isModalOpen } = this.state;
     const { classes } = this.props;
 

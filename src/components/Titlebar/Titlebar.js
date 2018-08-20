@@ -83,9 +83,7 @@ const mapBreadCrumbs = classes => fp.map(crumb => (
 
 const Titlebar = props => {
   const { classes, icons = [], title = "Title", breadCrumbs } = props;
-
-  console.log(breadCrumbs);
-
+  
   return (
     <AppBar className={classes.root} position="static">
       <Toolbar className={classes.titleBar}>
