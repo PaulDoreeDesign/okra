@@ -1,4 +1,5 @@
 import React from 'react';
+import fp from 'lodash/fp';
 import cn from 'classnames';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -15,9 +16,11 @@ import Unauthenticated from './Unauthenticated';
 
 const styles = {
   sidebarIsOpen: {
-    paddingLeft: 300,
+    transition: 'all .2s',
+    paddingLeft: 225,
   },
   sidebarIsClosed: {
+    transition: 'all .2s',
     paddingLeft: 75,
   },
 };
@@ -61,6 +64,9 @@ const mapDispatchToProps = dispatch => ({
     () => dispatch(handleToggleIsSidebarOpen(!currentState)),
 });
 
-const AppWithStyles = withStyles(styles)(App);
-
-export default withUser(withRouter(connect(mapStateToProps, mapDispatchToProps)(AppWithStyles)));
+export default fp.compose(
+  withUser,
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps),
+  withStyles(styles),
+)(App);
