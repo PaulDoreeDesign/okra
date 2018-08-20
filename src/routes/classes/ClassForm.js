@@ -3,13 +3,13 @@ import fp from 'lodash/fp';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Input from '../../../../components/Input';
-import { Submit, Cancel } from '../../../../components/Form';
-import { getCurrentSemester } from '../../../../utils';
-import WithModal from '../../../../components/HOC/WithModal';
-import WithToast from '../../../../components/HOC/WithToast';
-import SemesterPicker from '../../../../components/SemesterPicker';
-import addClassToSemester from '../../../../redux/actions/addClassToSemester';
+import Input from '../../components/Input';
+import { Submit, Cancel } from '../../components/Form';
+import { getCurrentSemester } from '../../utils';
+import WithModal from '../../components/HOC/WithModal';
+import WithToast from '../../components/HOC/WithToast';
+import SemesterPicker from '../../components/SemesterPicker';
+import addClassToSemester from '../../redux/actions/addClassToSemester';
 
 const styles = {
   form: {

@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
-import Table from '../../../../components/Table';
-import Titlebar from '../../../../components/Titlebar';
+import Table from '../../components/Table';
+import Titlebar from '../../components/Titlebar';
 
 const styles = {
   root: {

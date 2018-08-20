@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
 import ClassForm from './ClassForm';
 import ClassContainer from './ClassContainer';
-import Titlebar from '../../../../components/Titlebar';
+import Titlebar from '../../components/Titlebar';
 
 const styles = {
   icon: {

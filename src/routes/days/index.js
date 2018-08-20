@@ -1,12 +1,12 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 
-const Classes = Loadable({
- loader: () => import('./Classes'),
+const Days = Loadable({
+ loader: () => import('./Days'),
  loading: () => <div>Loading..</div>,
 });
 
 export default {
-  path: '/classes',
-  component: Classes,
-}
+  path: '/days',
+  Component: Days,
+};

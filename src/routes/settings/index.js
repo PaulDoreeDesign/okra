@@ -8,5 +8,5 @@ const Settings = Loadable({
 
 export default {
   path: '/settings',
-  component: Settings,
+  Component: Settings,
 };
